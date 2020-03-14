@@ -10,7 +10,8 @@
   "scripts": {
     "devStart": "nodemon ./server/server.js",
     "start": "node /server/server.js",
-    "build": "webpack --config webpack.config.js -w"
+    "build": "webpack --config webpack.config.js -w",
+    "seed": "node server/models/seed.js"
   },
   "dependencies": {
     "bluebird": "^3.7.2",
