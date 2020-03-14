@@ -2,6 +2,11 @@ const path = require('path')
 const express = require('express')
 const app = express()
 const port = 3004
+const mongoose = require('mongoose');
+const { Host, Area } = require('./models/Schema.js');
+
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 app.use(express.static(path.resolve(__dirname, '../public')));
 
