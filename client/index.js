@@ -6,7 +6,7 @@ const axios = require('axios');
 // Make a request for a user with a given ID
 axios.get('/zip', {
   params: {
-    zip: '36062'
+    zip: '72868'
   }
 })
 .then(function (response) {
