@@ -3,21 +3,21 @@ const Schema = mongoose.Schema;
 const db = require('./index.js');
 
 const hostSchema = new Schema({
-  name:  String,
-  body:   String, // description
-  interaction: String, //interaction with Guests
-  superhost: String, //superhost? hardcode this.
-  verified: String, // hard code 'Verified'
-  dateJoined: String, // Joined in December 2013
+  name: String,
+  body: String,
+  interaction: String,
+  superhost: String,
+  verified: String,
+  dateJoined: String,
   rules: {
-    checkin: String, //10AM - 4PM Hard code
-    checkout: String, //11AM
-    body: String //all rules paragraph form
+    checkin: String,
+    checkout: String,
+    body: String
   },
   location: {
     zip: String,
-    description: String, // Captain Cook Hawaii United States
-    gettingAround: String // Rental car is advisable.
+    description: String,
+    gettingAround: String
   }
 });
 
@@ -25,19 +25,20 @@ const areaSchema = new Schema({
   zip: String,
   properties: [
     {
-      propType: String, // entire apartment 1 bed, entire bungalow 2 beds, private room- 1 bed
+      propType: String,
       image: String,
-      ratings: Number, // 4.65 star
+      ratings: Number,
       review: Number,
-      description: String, // tagline Hale Koa Studio & 1 Bedroom Units!!, Cute Hale Sugar Shack 2, Ka awa Loa Plantation Guesthouse
-      cost: String //85$ / night
+      description: String,
+      cost: String
     }
   ],
   thingsToDo: [
     {
-      thingsType: String, // yoga, farm visit, surf, boat ride
-      description: String, // short tag line
-      cost: String //per person and what's included?
+      image: String,
+      thingsType: String,
+      description: String,
+      cost: String
     }
   ]
 });
