@@ -67,7 +67,7 @@ const areas = [];
       prop.image = faker.random.image();
       prop.ratings = Math.random() * 5;
       prop.review = faker.random.number();
-      prop.description = faker.lorem.words;
+      prop.description = faker.lorem.words();
       prop.cost = faker.random.number() + '$/night';
       area.properties.push(prop);
 

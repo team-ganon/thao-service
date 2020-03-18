@@ -1,6 +1,7 @@
 import React from 'react';
 
-function ThingsEntry(props) {
+function PropertyEntry(props) {
+  console.log(props.data.image);
   return (
     <div>
       <img src={props.data.image}></img>
@@ -11,4 +12,4 @@ function ThingsEntry(props) {
   )
 }
 
-export default ThingsEntry;
+export default PropertyEntry;
