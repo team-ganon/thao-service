@@ -4,14 +4,7 @@ import Neighborhood from './neighborhood.jsx';
 import Properties from './properties.jsx';
 import ThingsToDo from './thingsToDo.jsx';
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      data: '',
-    }
-  }
-  render() {
+function App(props) {
    return (
      <div>
        <div>
@@ -21,15 +14,13 @@ class App extends React.Component {
          <Neighborhood />
        </div>
        <div>
-         <Properties />
+         <Properties data={props.data.properties}/>
        </div>
        <div>
-         <ThingsToDo />
+         <ThingsToDo data={props.data.thingsToDo}/>
        </div>
      </div>
    )
-
-  }
 }
 
 export default App;

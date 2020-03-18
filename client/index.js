@@ -3,22 +3,18 @@ import ReactDOM from "react-dom";
 import App from './components/app.jsx';
 const axios = require('axios');
 
-// Make a request for a user with a given ID
+const appDom = document.querySelector('#app');
+
 axios.get('/zip', {
   params: {
-    zip: '36062'
+    zip: '72868'
   }
 })
-.then(function (response) {
-  console.log(response);
-})
+.then(res => res.data[0])
 .catch(function (error) {
   console.log(error);
 })
-.then(function () {
-  // always executed
-});
+.then(data => {
+  ReactDOM.render(<App data={data}/>, appDom);
+})
 
-
-const appDom = document.querySelector('#app');
-ReactDOM.render(<App/>, appDom);

@@ -1,4 +1,5 @@
 import React from 'react';
+import ThingsEntry from './thingsEntry.jsx'
 
 class ThingsToDo extends React.Component {
   constructor(props) {
@@ -9,9 +10,15 @@ class ThingsToDo extends React.Component {
   }
   render() {
    return (
-     <h1>I AM ThingsToDo</h1>
-   )
-
+     <div>
+       <h2>Things to do near this home</h2>
+       <div>
+        {this.props.data.map(thing => (
+          <ThingsEntry data={thing}/>
+        ))}
+       </div>
+     </div>
+   );
   }
 }
 
