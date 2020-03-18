@@ -52,7 +52,7 @@ const hostImages = [];
       }
     };
     host.name = faker.name.findName();
-    host.image = hostImages[Math.floor(Math.random() * 44)];
+    host.image = hostImages.shift();
     host.body = faker.lorem.paragraphs();
     host.interaction = faker.lorem.paragraph();
     host.dateJoined = faker.date.past();
@@ -91,14 +91,14 @@ const hostImages = [];
         cost: ''
       };
       prop.propType = faker.lorem.words();
-      prop.image = propertyImages[Math.floor(Math.random() * 119)];
+      prop.image = propertyImages.shift();
       prop.ratings = Math.random() * 5;
       prop.review = Math.floor(Math.random() * 500);
       prop.description = faker.lorem.words();
       prop.cost = Math.floor(Math.random() * 250) + '$/night';
       area.properties.push(prop);
 
-      things.image = thingsImages[Math.floor(Math.random() * 105)];
+      things.image = thingsImages.shift();
       things.thingsType = faker.lorem.word();
       things.description = faker.lorem.words();
       things.cost = Math.floor(Math.random() * 150) + '$/person';
