@@ -5,6 +5,7 @@ const db = require('./index.js');
 const hostSchema = new Schema({
   name: String,
   image: String,
+  city: String,
   body: String,
   interaction: String,
   superhost: String,
@@ -17,7 +18,7 @@ const hostSchema = new Schema({
   },
   location: {
     zip: String,
-    description: String,
+    body: String,
     gettingAround: String
   }
 });

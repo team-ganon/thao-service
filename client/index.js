@@ -7,7 +7,7 @@ const appDom = document.querySelector('#app');
 
 axios.get('/zip', {
   params: {
-    zip: '29866-9837'
+    zip: '26301-6161'
   }
 })
 .then(res => res.data[0])

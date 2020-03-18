@@ -35,6 +35,7 @@ const hostImages = [];
     let host = {
       name: '',
       image: '',
+      city: '',
       body: '',
       interaction: '',
       superhost: 'Superhost',
@@ -47,12 +48,13 @@ const hostImages = [];
       },
       location: {
         zip: '',
-        description: '',
+        body: '',
         gettingAround: 'Rental car is advisable.'
       }
     };
     host.name = faker.name.findName();
     host.image = hostImages.shift();
+    host.city = faker.address.city();
     host.body = faker.lorem.paragraphs();
     host.interaction = faker.lorem.paragraph();
     host.dateJoined = faker.date.past();
@@ -60,7 +62,7 @@ const hostImages = [];
     let zip = faker.address.zipCode();
     zips.push(zip);
     host.location.zip = zip;
-    host.location.description = faker.address.city();
+    host.location.body = faker.lorem.paragraphs();
     hosts.push(host);
   }
 })();
