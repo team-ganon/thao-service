@@ -4,6 +4,7 @@ const db = require('./index.js');
 
 const hostSchema = new Schema({
   name: String,
+  image: String,
   body: String,
   interaction: String,
   superhost: String,
