@@ -1,9 +1,8 @@
 import React from 'react';
 import ReactDOM from "react-dom";
 import App from './components/app.jsx';
+import API from '../config.js';
 const axios = require('axios');
-
-import API from './config.js';
 const appDom = document.querySelector('#app');
 const config = API.GoogleAPI;
 let areaData;
