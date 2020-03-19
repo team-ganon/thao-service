@@ -11,13 +11,13 @@ function App(props) {
          <Host />
        </div>
        <div>
-         <Neighborhood />
+         <Neighborhood data={props.host} api={props.api}/>
        </div>
        <div>
-         <Properties data={props.data.properties}/>
+         <Properties data={props.area.properties}/>
        </div>
        <div>
-         <ThingsToDo data={props.data.thingsToDo}/>
+         <ThingsToDo data={props.area.thingsToDo}/>
        </div>
      </div>
    )

@@ -33,6 +33,7 @@ const hostImages = [];
 (function createHostsData() {
   for (let i = 0; i < 10; i++) {
     let host = {
+      zip: '',
       name: '',
       image: '',
       city: '',
@@ -52,16 +53,16 @@ const hostImages = [];
         gettingAround: 'Rental car is advisable.'
       }
     };
-    host.name = faker.name.findName();
+    let zip = faker.address.zipCode().slice(0, 5);
+    zips.push(zip);
+    host.zip = zip;
+    host.name = faker.name.firstName();
     host.image = hostImages.shift();
     host.city = faker.address.city();
     host.body = faker.lorem.paragraphs();
     host.interaction = faker.lorem.paragraph();
     host.dateJoined = faker.date.past();
-    host.rules.body = faker.lorem.paragraph();
-    let zip = faker.address.zipCode();
-    zips.push(zip);
-    host.location.zip = zip;
+    host.rules.body = faker.lorem.paragraphs();
     host.location.body = faker.lorem.paragraphs();
     hosts.push(host);
   }

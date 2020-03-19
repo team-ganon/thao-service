@@ -3,6 +3,7 @@ const Schema = mongoose.Schema;
 const db = require('./index.js');
 
 const hostSchema = new Schema({
+  zip: String,
   name: String,
   image: String,
   city: String,
@@ -17,7 +18,6 @@ const hostSchema = new Schema({
     body: String
   },
   location: {
-    zip: String,
     body: String,
     gettingAround: String
   }
