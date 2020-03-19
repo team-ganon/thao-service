@@ -9,7 +9,7 @@ class Host extends React.Component {
   }
   render() {
    return (
-     <h1>I AM HOST</h1>
+     <h1>PLACEHOLDER HOST</h1>
    )
 
   }
