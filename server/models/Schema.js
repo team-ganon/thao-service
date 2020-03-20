@@ -3,20 +3,25 @@ const Schema = mongoose.Schema;
 const db = require('./index.js');
 
 const hostSchema = new Schema({
+  zip: String,
   name: String,
+  image: String,
+  city: String,
+  state: String,
   body: String,
   interaction: String,
   superhost: String,
   verified: String,
-  dateJoined: String,
+  monthJoined: String,
+  yearJoined: String,
+  review: Number,
   rules: {
     checkin: String,
     checkout: String,
     body: String
   },
   location: {
-    zip: String,
-    description: String,
+    body: String,
     gettingAround: String
   }
 });
