@@ -8,7 +8,7 @@ function App(props) {
    return (
      <div>
        <div>
-         <Host />
+         <Host data={props.host}/>
        </div>
        <div>
          <Neighborhood data={props.host} api={props.api}/>

@@ -37,11 +37,14 @@ const hostImages = [];
       name: '',
       image: '',
       city: '',
+      state: '',
       body: '',
       interaction: '',
       superhost: 'Superhost',
       verified: 'Verified',
-      dateJoined: '',
+      monthJoined: '',
+      yearJoined: '',
+      review: '',
       rules: {
         checkin: '10AM - 4PM',
         checkout: '11AM',
@@ -59,9 +62,12 @@ const hostImages = [];
     host.name = faker.name.firstName();
     host.image = hostImages.shift();
     host.city = faker.address.city();
+    host.state = faker.address.stateAbbr();
     host.body = faker.lorem.paragraphs();
     host.interaction = faker.lorem.paragraph();
-    host.dateJoined = faker.date.past();
+    host.monthJoined = faker.date.month();
+    host.yearJoined = 2020 - Math.floor(Math.random() * 11);
+    host.review = Math.floor(Math.random() * 500);
     host.rules.body = faker.lorem.paragraphs();
     host.location.body = faker.lorem.paragraphs();
     hosts.push(host);
