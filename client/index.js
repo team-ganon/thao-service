@@ -11,7 +11,7 @@ let hostData;
 
 axios.get('/area', {
   params: {
-    zip: '11450'
+    zip: '24601'
   }
 })
 .then(res => {
@@ -21,7 +21,7 @@ axios.get('/area', {
 .then(() => {
   axios.get('/host', {
     params: {
-      zip: '11450'
+      zip: '24601'
     }
   })
   .then(res => {
