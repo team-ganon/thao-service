@@ -9,16 +9,16 @@ class ThingsToDo extends React.Component {
     }
   }
   render() {
-   return (
-     <div>
-       <h2>Things to do near this home</h2>
-       <div>
-        {this.props.data.map(thing => (
-          <ThingsEntry data={thing}/>
-        ))}
-       </div>
-     </div>
-   );
+    return (
+      <div>
+        <h2>Things to do near this home</h2>
+        <div>
+          {this.props.data.map(thing => (
+            <ThingsEntry data={thing}/>
+          ))}
+        </div>
+      </div>
+    );
   }
 }
 
