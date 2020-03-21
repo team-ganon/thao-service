@@ -1,0 +1,10 @@
+.wrapper {
+  height: 450px;
+  width: 1000px;
+  margin: 16px 0 24px 0;
+  border: 1px solid black;
+  overflow: scroll;
+  content: ' ';
+  clear: both;
+  position: absolute;
+}

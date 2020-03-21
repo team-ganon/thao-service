@@ -1,5 +1,7 @@
 import React from 'react';
-import PropertyEntry from './propertyEntry.jsx'
+import PropertyEntry from './propertyEntry.jsx';
+import css from './properties.module.css';
+import styleable from 'react-styleable';
 
 class ThingsToDo extends React.Component {
   constructor(props) {
@@ -10,7 +12,7 @@ class ThingsToDo extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div className={this.props.css.wrapper}>
         <h2>More homes you may like</h2>
         <div>
           {this.props.data.map(property => (
@@ -22,4 +24,4 @@ class ThingsToDo extends React.Component {
   }
 }
 
-export default ThingsToDo;
+export default styleable(css)(ThingsToDo);

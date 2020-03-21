@@ -8,6 +8,10 @@ const config = API.GoogleAPI;
 let areaData;
 let hostData;
 
+function imageSlideClick(className) {
+  const el = document.querySelector('.' + className);
+}
+
 
 axios.get('/area', {
   params: {

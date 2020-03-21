@@ -16,10 +16,18 @@ module.exports = {
         }
       },
       {
-        test: /\.css/,
+        test: /\.module\.css/,
         loaders: [
           'style-loader',
-          'css-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              modules: {
+                localIdentName: '[local]--[hash:base64:5]',
+              },
+              importLoaders: 1
+            }
+          },
           'postcss-loader'
         ]
       }
