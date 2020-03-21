@@ -10,8 +10,8 @@ function App(props) {
     <div>
       {/* <div>
         <Host data={props.host}/>
-      </div> */}
-      {/* <div>
+      </div>
+      <div>
         <Neighborhood data={props.host} api={props.api}/>
       </div> */}
       <div>

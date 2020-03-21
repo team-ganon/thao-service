@@ -12,13 +12,15 @@ class ThingsToDo extends React.Component {
   }
   render() {
     return (
-      <div className={this.props.css.wrapper}>
+      <div>
         <h2>More homes you may like</h2>
-        <div>
+        <div className={this.props.css.carousel}>
           {this.props.data.map(property => (
             <PropertyEntry data={property}/>
           ))}
         </div>
+        <button>Previous</button>
+        <button>Next</button>
       </div>
     )
   }

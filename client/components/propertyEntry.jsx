@@ -5,7 +5,7 @@ import css from './propertyEntry.module.css';
 function PropertyEntry(props) {
   return (
     <div className={props.css.entry}>
-      <img className={props.css.images} src={props.data.image}></img>
+      <img src={props.data.image} width={280} height={280} mode='fit'></img>
       <div>{props.data.thingsType}</div>
       <div>{props.data.description}</div>
       <div>{props.data.cost}</div>
