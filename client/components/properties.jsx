@@ -1,7 +1,7 @@
 import React from 'react';
-import PropertyEntry from './propertyEntry.jsx';
 import css from './properties.module.css';
 import styleable from 'react-styleable';
+import carouselSlider from '../carouselFunc.js';
 
 class ThingsToDo extends React.Component {
   constructor(props) {
@@ -10,17 +10,27 @@ class ThingsToDo extends React.Component {
       data: '',
     }
   }
+
+  componentDidMount() {
+    carouselSlider(this.props.css.carousel, this.props.css.entry, 'prev', 'next');
+  }
+
   render() {
     return (
-      <div>
+      <div className={this.props.css.root}>
         <h2>More homes you may like</h2>
         <div className={this.props.css.carousel}>
           {this.props.data.map(property => (
-            <PropertyEntry data={property}/>
+              <div className={this.props.css.entry}>
+                <img src={property.image} width={280} height={280} mode='fit'></img>
+                <div>{property.thingsType}</div>
+                <div>{property.description}</div>
+                <div>{property.cost}</div>
+              </div>
           ))}
         </div>
-        <button>Previous</button>
-        <button>Next</button>
+        <button className='prev'>Previous</button>
+        <button className='next'>Next</button>
       </div>
     )
   }
