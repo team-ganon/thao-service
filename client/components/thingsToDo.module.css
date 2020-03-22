@@ -1,0 +1,36 @@
+.root {
+  position: relative;
+  border: 1px solid black;
+}
+
+.root h2 {
+  margin-left: 58px;
+}
+
+.carousel {
+  display: flex;
+  height: 350px;
+  margin-left: 50px;
+  overflow: hidden;
+  width: 882px;
+}
+
+.entry {
+  padding: 8px;
+}
+
+.prev {
+  position: absolute;
+  left: 35px;
+  top: 50%;
+}
+
+.next {
+  position: absolute;
+  left: 947px;
+  top: 50%;
+}
+
+.hidden {
+  visibility: hidden;
+}

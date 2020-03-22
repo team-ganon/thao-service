@@ -8,7 +8,7 @@ import './app.module.css';
 function App(props) {
   return (
     <div>
-      <div>
+      {/* <div>
         <Host data={props.host}/>
       </div>
       <div>
@@ -16,7 +16,7 @@ function App(props) {
       </div>
       <div>
         <Properties data={props.area.properties}/>
-      </div>
+      </div> */}
       <div>
         <ThingsToDo data={props.area.thingsToDo}/>
       </div>
