@@ -12,6 +12,10 @@ app.use(express.static(path.resolve(__dirname, '../public')));
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 
-app.get('/zip', function(req, res) {
+app.get('/area', function(req, res) {
   Area.find(req.query, (err, arr) => res.send(arr));
+})
+
+app.get('/host', function(req, res) {
+  Host.find(req.query, (err, arr) => res.send(arr));
 })

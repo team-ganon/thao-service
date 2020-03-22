@@ -1,0 +1,14 @@
+.root {
+  margin-left: 100px;
+}
+
+.carousel {
+  display: flex;
+  overflow: hidden;
+  width: 882px;
+  height: 350px;
+}
+
+.entry {
+  padding: 8px;
+}
