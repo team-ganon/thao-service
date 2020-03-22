@@ -12,7 +12,7 @@ class ThingsToDo extends React.Component {
   }
 
   componentDidMount() {
-    carouselSlider(this.props.css.carousel, this.props.css.entry, 'prev', 'next');
+    carouselSlider(this.props.css.carousel, this.props.css.entry, 'prev', 'next', 7);
   }
 
   render() {

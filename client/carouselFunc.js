@@ -1,4 +1,4 @@
-function carouselSlider(carouselClass, entryClass, prevButtonClass, nextButtonClass) {
+function carouselSlider(carouselClass, entryClass, prevButtonClass, nextButtonClass, maxNextClick) {
   const entries = document.querySelectorAll(`.${entryClass}`);
   const carousel = document.querySelector(`.${carouselClass}`);
   const prevButt = document.querySelector(`.${prevButtonClass}`);
@@ -12,7 +12,7 @@ function carouselSlider(carouselClass, entryClass, prevButtonClass, nextButtonCl
 
 
   function handleNext() {
-    if (counter === 7) {
+    if (counter === maxNextClick) {
       return;
     }
     counter++;
