@@ -8,9 +8,9 @@ import './app.module.css';
 function App(props) {
   return (
     <div>
-      {/* <div>
+      <div>
         <Host data={props.host}/>
-      </div> */}
+      </div>
       <div>
         <Neighborhood data={props.host} api={props.api}/>
       </div>
