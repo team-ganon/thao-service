@@ -1,16 +1,18 @@
 .root {
+  margin: 8px;
   position: relative;
-  border: 1px solid black;
 }
 
 .root h2 {
   margin-left: 58px;
+  padding-top: 10px;
 }
 
 .carousel {
   display: flex;
   height: 350px;
   margin-left: 50px;
+  margin-top: 10px;
   overflow: hidden;
   width: 882px;
 }
@@ -22,15 +24,25 @@
 .prev {
   position: absolute;
   left: 35px;
-  top: 50%;
+  opacity: 0.5;
+  top: 45%;
 }
 
 .next {
   position: absolute;
   left: 947px;
-  top: 50%;
+  opacity: 0.5;
+  top: 45%;
 }
 
 .hidden {
   visibility: hidden;
+}
+
+.type {
+  opacity: 60%;
+}
+
+.description {
+  font-weight: bold;
 }

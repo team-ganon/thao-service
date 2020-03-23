@@ -23,9 +23,9 @@ class ThingsToDo extends React.Component {
           {this.props.data.map(thing => (
             <div className={this.props.css.entry}>
               <img src={thing.image} width={280} height={280} mode='fit'></img>
-              <div>{thing.thingsType}</div>
-              <div>{thing.description}</div>
-              <div>{thing.cost}</div>
+              <p className={this.props.css.type}>{thing.thingsType}</p>
+              <p className={this.props.css.description}>{thing.description}</p>
+              <p className={this.props.css.cost}>{thing.cost}</p>
             </div>
           ))}
          </div>
