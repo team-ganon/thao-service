@@ -17,5 +17,6 @@ app.get('/area', function(req, res) {
 })
 
 app.get('/host', function(req, res) {
+  console.log(req);
   Host.find(req.query, (err, arr) => res.send(arr));
 })
