@@ -1,18 +1,21 @@
 import React from 'react';
 import ReactDOM from "react-dom";
 import App from './components/app.jsx';
+import API from '../config.js';
 const axios = require('axios');
-
-import API from './config.js';
 const appDom = document.querySelector('#app');
 const config = API.GoogleAPI;
 let areaData;
 let hostData;
 
+function imageSlideClick(className) {
+  const el = document.querySelector('.' + className);
+}
+
 
 axios.get('/area', {
   params: {
-    zip: '15080'
+    zip: '24601'
   }
 })
 .then(res => {
@@ -22,7 +25,7 @@ axios.get('/area', {
 .then(() => {
   axios.get('/host', {
     params: {
-      zip: '15080'
+      zip: '24601'
     }
   })
   .then(res => {
