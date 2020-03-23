@@ -12,7 +12,7 @@ class ThingsToDo extends React.Component {
   }
 
   componentDidMount() {
-    carouselSlider(this.props.css.carousel, this.props.css.entry, 'prev', 'next', 7);
+    carouselSlider(this.props.css.carousel, this.props.css.entry, this.props.css.prev, this.props.css.next, 7, this.props.css.hidden);
   }
 
   render() {
@@ -23,14 +23,14 @@ class ThingsToDo extends React.Component {
           {this.props.data.map(property => (
               <div className={this.props.css.entry}>
                 <img src={property.image} width={280} height={280} mode='fit'></img>
-                <div>{property.thingsType}</div>
-                <div>{property.description}</div>
-                <div>{property.cost}</div>
+                <p className={this.props.css.type}>{property.propType}</p>
+                <p className={this.props.css.description}>{property.description}</p>
+                <p className={this.props.css.cost}>{property.cost}</p>
               </div>
           ))}
         </div>
-        <button className='prev'>Previous</button>
-        <button className='next'>Next</button>
+        <span className={`fas fa-chevron-left ${this.props.css.prev} ${this.props.css.hidden}`}></span>
+         <span className={`fas fa-chevron-right ${this.props.css.next}`}></span>
       </div>
     )
   }
