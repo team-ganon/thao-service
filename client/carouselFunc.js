@@ -1,4 +1,4 @@
-function carouselSlider(carouselClass, entryClass, prevButtonClass, nextButtonClass, maxNextClick) {
+function carouselSlider(carouselClass, entryClass, prevButtonClass, nextButtonClass, maxNextClick, hiddenClass) {
   const entries = document.querySelectorAll(`.${entryClass}`);
   const carousel = document.querySelector(`.${carouselClass}`);
   const prevButt = document.querySelector(`.${prevButtonClass}`);
@@ -12,25 +12,32 @@ function carouselSlider(carouselClass, entryClass, prevButtonClass, nextButtonCl
 
 
   function handleNext() {
-    if (counter === maxNextClick) {
-      return;
-    }
     counter++;
     entries.forEach(entry => {
       entry.style.transition = 'transform 0.4s ease-in-out';
       entry.style.transform = `translateX(-${size * counter}px)`;
     })
+    if (counter === maxNextClick) {
+      nextButt.classList.toggle(hiddenClass);
+    }
+    if (counter === 1) {
+      prevButt.classList.remove(hiddenClass);
+    }
   }
 
   function handlePrev() {
-    if (counter === 0) {
-      return;
-    }
     counter--;
     entries.forEach(entry => {
       entry.style.transition = 'transform 0.4s ease-in-out';
       entry.style.transform = `translateX(-${size * counter}px)`;
     })
+    if (counter === 0) {
+      prevButt.classList.toggle(hiddenClass);
+    }
+
+    if (counter === maxNextClick - 1) {
+      nextButt.classList.remove(hiddenClass);
+    }
   }
 }
 
