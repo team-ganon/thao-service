@@ -28,7 +28,6 @@ module.exports = {
               importLoaders: 1
             }
           },
-          'postcss-loader'
         ]
       }
     ]
