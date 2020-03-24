@@ -23,16 +23,16 @@
 
 .prev {
   position: absolute;
-  left: 35px;
+  left: 30px;
   opacity: 0.5;
-  top: 45%;
+  top: 35%;
 }
 
 .next {
   position: absolute;
   left: 947px;
   opacity: 0.5;
-  top: 45%;
+  top: 35%;
 }
 
 .hidden {
