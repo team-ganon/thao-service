@@ -10,7 +10,7 @@
 
 .carousel {
   display: flex;
-  height: 350px;
+  height: 360px;
   margin-left: 50px;
   margin-top: 10px;
   overflow: hidden;
@@ -23,16 +23,16 @@
 
 .prev {
   position: absolute;
-  left: 35px;
+  left: 30px;
   opacity: 0.5;
-  top: 45%;
+  top: 35%;
 }
 
 .next {
   position: absolute;
   left: 947px;
   opacity: 0.5;
-  top: 45%;
+  top: 35%;
 }
 
 .hidden {

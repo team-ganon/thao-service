@@ -15,8 +15,6 @@
     "test": "jest"
   },
   "dependencies": {
-    "@material-ui/core": "^4.9.7",
-    "@material-ui/icons": "^4.9.1",
     "axios": "^0.19.2",
     "css-loader": "^3.4.2",
     "express": "^4.17.1",
@@ -46,9 +44,19 @@
     "webpack-cli": "^3.3.11"
   },
   "jest": {
-    "snapshotSerializers": ["enzyme-to-json/serializer"],
-    "collectCoverageFrom": ["./**/*.js", "./**/*.jsx", "./**/*.css"],
-    "coverageReporters": ["text"],
-    "setupFilesAfterEnv": ["./setupTests.js"]
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "collectCoverageFrom": [
+      "./**/*.js",
+      "./**/*.jsx",
+      "./**/*.css"
+    ],
+    "coverageReporters": [
+      "text"
+    ],
+    "setupFilesAfterEnv": [
+      "./setupTests.js"
+    ]
   }
 }
