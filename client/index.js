@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import App from './components/app.jsx';
 import API from '../config.js';
 const axios = require('axios');
-const appDom = document.querySelector('#app');
+const appDom = document.querySelector('#thao');
 const config = API.GoogleAPI;
 let areaData;
 let hostData;
@@ -14,7 +14,7 @@ function imageSlideClick(className) {
 }
 
 
-axios.get('/area', {
+axios.get('http://localhost:3004/area', {
   params: {
     zip: '58059'
   }
@@ -24,7 +24,7 @@ axios.get('/area', {
   })
   .catch(err => console.log(err))
   .then(() => {
-    axios.get('/host', {
+    axios.get('http://localhost:3004/host', {
       params: {
         zip: '58059'
       }

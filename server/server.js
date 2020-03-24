@@ -1,6 +1,7 @@
 const path = require('path');
 const express = require('express');
 const app = express();
+const cors = require('cors');
 const port = 3004;
 const mongoose = require('mongoose');
 const { Host, Area } = require('./models/Schema.js');
@@ -12,10 +13,14 @@ app.use(express.static(path.resolve(__dirname, '../public')));
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 
-app.get('/area', function(req, res) {
+app.get('/area', cors(), function(req, res) {
   Area.find(req.query, (err, arr) => res.send(arr));
 });
 
-app.get('/host', function(req, res) {
+app.get('/host', cors(), function(req, res) {
   Host.find(req.query, (err, arr) => res.send(arr));
+});
+
+app.get('/app.js', cors(), function (req, res) {
+  res.sendFile(path.join(__dirname, '../public/bundle.js'))
 });
