@@ -1,7 +1,7 @@
 import React from 'react';
 import Enzyme, { shallow } from 'enzyme';
 import NeighborHood from '../client/components/neighborhood.jsx';
-import API from '../client/config.js';
+import API from '../config.js';
 
 const title = 'Test NeighborHood Component';
 const config = API.GoogleAPI;

@@ -39,11 +39,15 @@
     "enzyme-to-json": "^3.4.4",
     "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
     "jest": "^25.1.0",
+    "jest-css-modules": "^2.1.0",
     "nodemon": "^2.0.2",
     "webpack": "^4.42.0",
     "webpack-cli": "^3.3.11"
   },
   "jest": {
+    "moduleNameMapper": {
+      "\\.(css|less|scss|sss|styl)$": "<rootDir>/node_modules/jest-css-modules"
+    },
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
     ],
