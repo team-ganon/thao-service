@@ -21,7 +21,7 @@ function App(props) {
         <ThingsToDo data={props.area.thingsToDo}/>
       </div>
     </div>
-  )
+  );
 }
 
 export default App;

@@ -1,3 +1,4 @@
+/* eslint-disable func-style */
 function carouselSlider(carouselClass, entryClass, prevButtonClass, nextButtonClass, maxNextClick, hiddenClass) {
   const entries = document.querySelectorAll(`.${entryClass}`);
   const carousel = document.querySelector(`.${carouselClass}`);
@@ -16,7 +17,7 @@ function carouselSlider(carouselClass, entryClass, prevButtonClass, nextButtonCl
     entries.forEach(entry => {
       entry.style.transition = 'transform 0.4s ease-in-out';
       entry.style.transform = `translateX(-${size * counter}px)`;
-    })
+    });
     if (counter === maxNextClick) {
       nextButt.classList.toggle(hiddenClass);
     }
@@ -30,7 +31,7 @@ function carouselSlider(carouselClass, entryClass, prevButtonClass, nextButtonCl
     entries.forEach(entry => {
       entry.style.transition = 'transform 0.4s ease-in-out';
       entry.style.transform = `translateX(-${size * counter}px)`;
-    })
+    });
     if (counter === 0) {
       prevButt.classList.toggle(hiddenClass);
     }

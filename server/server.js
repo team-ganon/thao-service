@@ -1,7 +1,7 @@
-const path = require('path')
-const express = require('express')
-const app = express()
-const port = 3004
+const path = require('path');
+const express = require('express');
+const app = express();
+const port = 3004;
 const mongoose = require('mongoose');
 const { Host, Area } = require('./models/Schema.js');
 
@@ -14,8 +14,8 @@ app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 
 app.get('/area', function(req, res) {
   Area.find(req.query, (err, arr) => res.send(arr));
-})
+});
 
 app.get('/host', function(req, res) {
   Host.find(req.query, (err, arr) => res.send(arr));
-})
+});

@@ -1,5 +1,6 @@
+/* eslint-disable func-style */
 import React from 'react';
-import ReactDOM from "react-dom";
+import ReactDOM from 'react-dom';
 import App from './components/app.jsx';
 import API from '../config.js';
 const axios = require('axios');
@@ -18,23 +19,23 @@ axios.get('/area', {
     zip: '58059'
   }
 })
-.then(res => {
-  areaData = res.data[0];
-})
-.catch(err => console.log(err))
-.then(() => {
-  axios.get('/host', {
-    params: {
-      zip: '58059'
-    }
-  })
   .then(res => {
-    hostData = res.data[0];
+    areaData = res.data[0];
   })
   .catch(err => console.log(err))
   .then(() => {
-    ReactDOM.render(<App area={areaData} host={hostData} api={config}/>, appDom);
-  })
-})
+    axios.get('/host', {
+      params: {
+        zip: '58059'
+      }
+    })
+      .then(res => {
+        hostData = res.data[0];
+      })
+      .catch(err => console.log(err))
+      .then(() => {
+        ReactDOM.render(<App area={areaData} host={hostData} api={config}/>, appDom);
+      });
+  });
 
 

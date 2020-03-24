@@ -7,14 +7,14 @@ class Host extends React.Component {
     super(props);
     this.state = {
       Body: <p>{this.props.data.body.slice(0, 200)}... <a className={this.props.css.links}href='' onClick={this.handleClick.bind(this)}>Read more</a></p>
-    }
+    };
   }
 
   handleClick(e) {
     e.preventDefault();
     this.setState ({
       Body: <p>{this.props.data.body}</p>
-    })
+    });
   }
 
   render() {
@@ -31,24 +31,24 @@ class Host extends React.Component {
             <span class="fas fa-star"></span> &nbsp; {data.review} Reviews &nbsp; <span class="fas fa-badge-check"></span> &nbsp; {data.verified}
           </p>
           <div className={style.picWrapper}>
-          <img className={style.profilePic} src={data.image} width={60} height={60} mode='fit'></img>
+            <img className={style.profilePic} src={data.image} width={60} height={60} mode='fit'></img>
           </div>
         </div>
         <div className={style.superhost}>
           <p>
             <span className={style.bold}>{data.name} is a Superhost ·</span> Superhosts are experienced, highly rated hosts <br/> who are committed to providing great stays for guests.
-          <div className={style.medalIcon}>
-            <span className={style.medalIcon} class="fad fa-medal" style={{'--fa-primary-color': 'orange', '--fa-secondary-color': 'dimgray'}}></span>
-          </div>
+            <div className={style.medalIcon}>
+              <span className={style.medalIcon} class="fad fa-medal" style={{'--fa-primary-color': 'orange', '--fa-secondary-color': 'dimgray'}}></span>
+            </div>
           </p>
         </div>
-            <div className={style.Body}>
-              {this.state.Body}
-            </div>
+        <div className={style.Body}>
+          {this.state.Body}
+        </div>
         <p>
           <div className={style.interactionGuest}>
-          <h3> Interaction with guests</h3>
-          {data.interaction}
+            <h3> Interaction with guests</h3>
+            {data.interaction}
           </div>
           <div className={style.info}>
             <div className={style.info}>
@@ -63,15 +63,15 @@ class Host extends React.Component {
           </div>
           <div className={style.buttonWrap}>
             <div className={style.links}>
-            <a>Contact host</a>
+              <a>Contact host</a>
             </div>
           </div>
           <div className={style.disclaimer}>
           Always communicate through Airbnb · To protect your payment, never transfer money or communicate outside of the Airbnb website or app. <a className={style.links} href=''>Learn more</a>
           </div>
         </p>
-     </div>
-    )
+      </div>
+    );
   }
 }
 
