@@ -3,6 +3,7 @@ import Host from './host.jsx';
 import Neighborhood from './neighborhood.jsx';
 import Properties from './properties.jsx';
 import ThingsToDo from './thingsToDo.jsx';
+import './app.module.css';
 
 function App(props) {
   return (

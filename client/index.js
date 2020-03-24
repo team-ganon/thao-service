@@ -8,10 +8,14 @@ const config = API.GoogleAPI;
 let areaData;
 let hostData;
 
+function imageSlideClick(className) {
+  const el = document.querySelector('.' + className);
+}
+
 
 axios.get('/area', {
   params: {
-    zip: '11450'
+    zip: '58059'
   }
 })
 .then(res => {
@@ -21,7 +25,7 @@ axios.get('/area', {
 .then(() => {
   axios.get('/host', {
     params: {
-      zip: '11450'
+      zip: '58059'
     }
   })
   .then(res => {
