@@ -24,7 +24,7 @@ const hostImages = [];
 })();
 
 (function getHostImages() {
-  for (let i = 1; i < 10; i++) {
+  for (let i = 1; i < 11; i++) {
     let url = `https://fechrr.s3.amazonaws.com/host/host+(${i}).jpg`;
     hostImages.push(url);
   }
