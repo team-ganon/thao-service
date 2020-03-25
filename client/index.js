@@ -16,7 +16,7 @@ function imageSlideClick(className) {
 
 axios.get('http://localhost:3004/area', {
   params: {
-    zip: '58059'
+    zip: '86205'
   }
 })
   .then(res => {
@@ -26,7 +26,7 @@ axios.get('http://localhost:3004/area', {
   .then(() => {
     axios.get('http://localhost:3004/host', {
       params: {
-        zip: '58059'
+        zip: '86205'
       }
     })
       .then(res => {
