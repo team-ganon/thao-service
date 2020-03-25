@@ -14,19 +14,17 @@ function imageSlideClick(className) {
   const el = document.querySelector('.' + className);
 }
 
-axios.get('http://18.212.178.205:3004/area')
+axios.get('http://18.212.178.205:3004/zip', {})
   .then(res => {
-    let randomZip = Math.floor(Math.random() * 10);
-    zipCode = res[randomZip];
-    return zipCode;
+    let randomIndex = Math.floor(Math.random() * 10);
+    zipCode = res.data[randomIndex].zip;
   })
-  .then(zipCode => {
+  .then(() => {
     axios.get('http://18.212.178.205:3004/area', {
       params: {
         zip: zipCode
       }
     })
-  })
   .then(res => {
     areaData = res.data[0];
   })
@@ -44,4 +42,5 @@ axios.get('http://18.212.178.205:3004/area')
       .then(() => {
         ReactDOM.render(<App area={areaData} host={hostData} api={config}/>, appDom);
       });
-  });
+  })
+});
