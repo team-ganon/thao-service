@@ -8,17 +8,25 @@ const appDom = document.querySelector('#thao');
 const config = API.GoogleAPI;
 let areaData;
 let hostData;
+let zipCode;
 
 function imageSlideClick(className) {
   const el = document.querySelector('.' + className);
 }
 
-
-axios.get('http://18.212.178.205:3004/area', {
-  params: {
-    zip: '86205'
-  }
-})
+axios.get('http://18.212.178.205:3004/area')
+  .then(res => {
+    let randomZip = Math.floor(Math.random() * 10);
+    zipCode = res[randomZip];
+    return zipCode;
+  })
+  .then(zipCode => {
+    axios.get('http://18.212.178.205:3004/area', {
+      params: {
+        zip: zipCode
+      }
+    })
+  })
   .then(res => {
     areaData = res.data[0];
   })
@@ -26,7 +34,7 @@ axios.get('http://18.212.178.205:3004/area', {
   .then(() => {
     axios.get('http://18.212.178.205:3004/host', {
       params: {
-        zip: '86205'
+        zip: zipCode
       }
     })
       .then(res => {
