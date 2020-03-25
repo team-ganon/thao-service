@@ -14,7 +14,7 @@ function imageSlideClick(className) {
 }
 
 
-axios.get('http://localhost:3004/area', {
+axios.get('http://18.212.178.205:3004/area', {
   params: {
     zip: '86205'
   }
@@ -24,7 +24,7 @@ axios.get('http://localhost:3004/area', {
   })
   .catch(err => console.log(err))
   .then(() => {
-    axios.get('http://localhost:3004/host', {
+    axios.get('http://18.212.178.205:3004/host', {
       params: {
         zip: '86205'
       }
@@ -37,5 +37,3 @@ axios.get('http://localhost:3004/area', {
         ReactDOM.render(<App area={areaData} host={hostData} api={config}/>, appDom);
       });
   });
-
-
