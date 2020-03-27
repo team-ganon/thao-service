@@ -1,38 +1,36 @@
 .root {
-  margin: 8px;
+  margin: 8px 8px 8px 0;
   position: relative;
 }
 
 .root h2 {
-  margin-left: 58px;
   padding-top: 10px;
 }
 
 .carousel {
   display: flex;
   height: 360px;
-  margin-left: 50px;
   margin-top: 10px;
   overflow: hidden;
-  width: 882px;
+  width: 856px;
 }
 
 .entry {
-  padding: 8px;
+  padding-right: 8px;
 }
 
 .prev {
   position: absolute;
-  left: 30px;
+  left: -30px;
   opacity: 0.5;
-  top: 35%;
+  top: 30%;
 }
 
 .next {
   position: absolute;
-  left: 947px;
+  left: 875px;
   opacity: 0.5;
-  top: 35%;
+  top: 30%;
 }
 
 .hidden {

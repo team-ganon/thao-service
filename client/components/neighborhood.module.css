@@ -1,11 +1,11 @@
 .root {
   border-bottom: 1px solid #777;
   border-top: 1px solid #777;
-  margin: 8px 8px 8px 70px;
+  margin: 8px 8px 8px 0px;
   padding-top: 15px;
   position: relative;
   width: 40vw;
-  /* width: 600px; */
+  /* margin: 8px 8px 8px 70px; */
 }
 
 .root iframe {

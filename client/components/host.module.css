@@ -1,8 +1,8 @@
 .root {
-  margin: 50px 8px 8px 70px;
+  margin: 50px 8px 8px 0px;
   position: relative;
   width: 40vw;
-  /* width: 600px; */
+  /* margin: 50px 8px 8px 70px; */
 }
 
 .profile {

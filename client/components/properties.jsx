@@ -28,9 +28,9 @@ class ThingsToDo extends React.Component {
               <p className={this.props.css.cost}>{property.cost}</p>
             </div>
           ))}
-        </div>
         <span className={`fas fa-chevron-left ${this.props.css.prev} ${this.props.css.hidden}`}></span>
         <span className={`fas fa-chevron-right ${this.props.css.next}`}></span>
+        </div>
       </div>
     );
   }
