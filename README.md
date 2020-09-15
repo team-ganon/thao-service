@@ -1,39 +1,15 @@
 # Project Name
-
-> Project description
+RentMeBnB
+Demo: https://drive.google.com/file/d/1NhPr5hcS0moSIFpIn6555az6FnugVfqB/view?usp=sharing
 
 ## Related Projects
+https://github.com/team-ganon/thao-Proxy
 
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
+## About
+A simple replica of AirBnB for demo and learning purposes. The project is built on React + CSS Modules on the front end, and Node + Mongoose on the back end. All components (except icons) are created from scratch. Project was deployed to Amazon EC2 with image hosted on Amazon S3. Please see demo video in google drive for a detailed runthrough of the project!  
 
-## Table of Contents
-
-1. [Usage](#Usage)
-1. [Requirements](#requirements)
-1. [Development](#development)
-
-## Usage
-
-> Some usage instructions
-
-## Requirements
-
-An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
-
-- Node 6.13.0
-- etc
-
-## Development
-
-### Installing Dependencies
-
-From within the root directory:
-
-```sh
-npm install -g webpack
-npm install
-```
-
+## Screenshots
+![Alt text](https://ibb.co/R6JrvyZ "Screenshot 1")
+![Alt text](https://ibb.co/qYm472S "Screenshot 2")
+![Alt text](https://ibb.co/jD2p13Y "Screenshot 3")
+![Alt text](https://ibb.co/WnNwb61 "Screenshot 4")
